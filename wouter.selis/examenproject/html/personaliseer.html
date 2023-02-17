@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <script type="text/javascript" src="../script/form_validation.js"></script>
+    <link rel="stylesheet" href="../css/project.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalisatie</title>
+    <link rel="icon" href="../media/afbeeldingIndex/icon.png" type="image/gif">
+</head>
+<body class="grid-personaliseren-body">
+<h1 class="hidden">Personaliseerpagina</h1>
+<header>
+    <nav class="heading">
+        <h2 class="hidden">Menu</h2>
+        <ul class="heading-logo">
+            <li><a href="../index.html"><img class="logo-opmaak" src="../media/afbeeldingIndex/logo.png"
+                                             alt="Logo website"></a></li>
+            <li class="heading-logo-naam">Selis Sneakers</li>
+        </ul>
+        <ul class="heading-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/product.html">Product</a></li>
+            <li class="active">Personaliseer</li>
+            <li id="info"><a href="#">Informatie</a>
+                <ul>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                    <li><a href="../html/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main-personaliseren">
+    <article class="article-personaliseren">
+        <h2 class="hidden">Personalisatie</h2>
+        <section class="pers-tekst">
+            <h3 class="hidden">Uitleg personaliseren</h3>
+            <p>Stel hier je eigen schoen samen! Maak een keuze uit onze vijf modelschoenen en pas ze aan hoe jij wilt.
+                Heb je nog een extra idee voor je schoen, dan kan je onderaan de pagina een bericht meegeven.</p>
+        </section>
+        <section class="pers-keuze">
+            <h3 class="hidden">keuzeknoppen</h3>
+            <p>Begin hier met personaliseren:</p>
+            <form class="keuzeknoppen" action="bevestiging.html" method="get">
+                <fieldset>
+                    <label for="schoen-model">Kies een schoen:</label>
+                    <select name="schoen-model" id="schoen-model">
+                        <option value="Nike SB Dunk High QS Richard Mulder">Nike SB Dunk High QS Richard
+                            Mulder(€265,00)
+                        </option>
+                        <option value="Nike Dunk Low Medium Curry">Nike Dunk Low Medium Curry(€270,00)</option>
+                        <option value="Adidas Trinidad Tobago">Adidas Trinidad Tobago(€85,00)</option>
+                        <option value="Puma Blaze & Basket Winterized">Puma Blaze & Basket Winterized(€65,00)</option>
+                        <option value="Vans SK8-Hi Hiking Pack">Vans SK8-Hi Hiking Pack(€95,00)</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Hoofdkleur(€10,50):
+                    </legend>
+
+                    <label for="hkl-zwart">Zwart<input type="radio" id="hkl-zwart" name="radio-hkl" checked value="zwart"></label>
+
+                    <label for="hkl-wit">Wit<input type="radio" id="hkl-wit" name="radio-hkl" value="wit"></label>
+
+                    <label for="hkl-oranje">Oranje<input type="radio" id="hkl-oranje" name="radio-hkl" value="oranje"></label>
+
+                    <label for="hkl-blauw">Blauw<input type="radio" id="hkl-blauw" name="radio-hkl" value="blauw"></label>
+
+                    <label for="hkl-rood">Rood<input type="radio" id="hkl-rood" name="radio-hkl" value="rood"></label>
+
+                    <label for="hkl-groen">Groen<input type="radio" id="hkl-groen" name="radio-hkl" value="groen"></label>
+                </fieldset>
+                <fieldset>
+
+                    <legend>Subkleur(€7,50):</legend>
+
+                    <label for="skl-zwart">Zwart<input type="radio" id="skl-zwart" name="radio-skl" checked value="zwart"></label>
+
+                    <label for="skl-wit">Wit<input type="radio" id="skl-wit" name="radio-skl" value="wit"></label>
+
+                    <label for="skl-oranje">Oranje<input type="radio" id="skl-oranje" name="radio-skl" value="oranje"></label>
+
+                    <label for="skl-blauw">Blauw<input type="radio" id="skl-blauw" name="radio-skl" value="blauw"></label>
+
+                    <label for="skl-rood">Rood<input type="radio" id="skl-rood" name="radio-skl" value="rood"></label>
+
+                    <label for="skl-groen">Groen<input type="radio" id="skl-groen" name="radio-skl"
+                                                       value="groen"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Maat:</legend>
+
+                    <label for="maat-38">38<input type="radio" id="maat-38" name="radio-maat" checked value="38"></label>
+
+                    <label for="maat-39">39<input type="radio" id="maat-39" name="radio-maat" value="39"></label>
+
+                    <label for="maat-40">40<input type="radio" id="maat-40" name="radio-maat" value="40"></label>
+
+                    <label for="maat-41">41<input type="radio" id="maat-41" name="radio-maat" value="41"></label>
+
+                    <label for="maat-42">42<input type="radio" id="maat-42" name="radio-maat" value="42"></label>
+
+                    <label for="maat-43">43<input type="radio" id="maat-43" name="radio-maat" value="43"></label>
+
+                    <label for="maat-44">44<input type="radio" id="maat-44" name="radio-maat" value="44"></label>
+
+                    <label for="maat-45">45<input type="radio" id="maat-45" name="radio-maat" value="45"></label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Extra(€5,00)</legend>
+                    <label for="tekst-schoen">Tekst op schoen:<input type="text" id="tekst-schoen" name="tekst-schoen"></label>
+                </fieldset>
+                <fieldset>
+
+                    <legend>Gegevens</legend>
+
+                    <label for="vnaam">Voornaam:<input type="text" id="vnaam" name="vnaam"></label>
+
+                    <label for="fnaam">Achternaam:<input type="text" id="fnaam" name="fnaam" required></label>
+                    <span id="error_fnaam"></span>
+
+                    <label for="email">E-mailadres:<input type="email" id="email" name="email" required></label>
+                    <span id="error_email"></span>
+
+                    <label for="straatnaam">Straatnaam:<input type="text" id="straatnaam" name="straatnaam"></label>
+
+                    <label for="huisnummer">Huisnummer:<input type="text" id="huisnummer" name="huisnummer"></label>
+
+                    <label for="gemeente">Gemeente:<input type="text" id="gemeente" name="gemeente"></label>
+
+                    <label for="postcode">Postcode:<input type="text" id="postcode" name="postcode"></label>
+
+                    <label for="opmerking">Opmerkingen:<textarea id="opmerking" placeholder="bv. ik wil vlammen op de zijkant van mijn schoen" name="opmerking"></textarea></label>
+
+                    <input type="submit" value="Bevestigen">
+                    <div id="error_submit"></div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="pers-image">
+            <h3 class="hidden">Afbeelding kleurencirkel</h3>
+            <img class="img-kleuren" src="../media/afbeeldingPersonaliseer/personaliseer.png" alt="Kleurencirkel">
+        </section>
+    </article>
+</main>
+<footer>
+    <section>
+        <h2 class="hidden">Footer copyright</h2>
+        <p class="footer-tekst">© Selis Sneakers</p>
+    </section>
+</footer>
+</body>
+</html>

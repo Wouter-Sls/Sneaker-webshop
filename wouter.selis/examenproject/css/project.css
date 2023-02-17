@@ -1,0 +1,1460 @@
+/***********************************************/
+/***********************************************/
+/********       Algemene opmaak        *********/
+/***********************************************/
+/***********************************************/
+
+
+/*Index pagina grid*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Bij opsommingen bolletjes verwijderen */
+ul > li {
+    display: inline;
+}
+
+/*Onnuttige hoofdingen onzichtbaar maken*/
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+
+}
+
+a:hover {
+    color: blue;
+}
+
+.padding {
+    padding: 10px;
+}
+
+/***********************************************/
+/***********************************************/
+/********       Opmaak header        ***********/
+/***********************************************/
+/***********************************************/
+
+
+.grid-home {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    grid-template-areas:
+"g-header"
+"g-main"
+"g-footer";
+}
+
+header {
+    grid-area: g-header;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.heading-logo {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    flex: 1;
+}
+
+.logo-opmaak {
+    float: left;
+    padding: 0 10px 10px 10px;
+}
+
+.heading-logo-naam {
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 60px;
+    max-width: fit-content;
+    background-color: #d69a57;
+    color: black;
+    padding: 0 5px 0 5px;
+}
+
+.heading-nav{
+    background-color: black;
+    overflow: hidden;
+    flex:1;
+    transition:all 0.3s ease;
+}
+
+
+.heading-nav li.active {
+    background-color: #757474;
+    color: white;
+}
+
+.heading-nav li {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+
+.heading-nav li a {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.heading-nav li:hover {
+    background-color: #d69a57;
+    color: white;
+}
+
+/******************Creatie submenu*************************/
+
+
+
+.heading-nav li {
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.heading-nav li:hover {
+    cursor: pointer;
+}
+
+.heading-nav li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 33px;
+    left: 312px;
+    display:none;
+}
+
+.heading-nav li:hover > ul,
+.heading-nav li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.heading-nav li ul li {
+    display:inline;
+    clear: both;
+    width: 100%;
+}
+
+.heading-nav li ul li {
+    background-color: black;
+}
+
+.heading-nav li ul li:hover {
+    background-color: #d69a57;
+}
+
+
+
+
+/***********************************************/
+/***********************************************/
+/********  Opmaak Main Index pagina*************/
+/***********************************************/
+/***********************************************/
+
+.main-home {
+    grid-area: g-main;
+    width: 100%;
+}
+
+/*grid opmaak article in home pagina*/
+.article-home {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+"img-groot img-groot img-groot"
+"garanties garanties garanties"
+"vragen illustratie1 illustratie1";
+}
+
+
+.content1 {
+    grid-area: img-groot;
+    width: 100%;
+}
+
+.content2 {
+    grid-area: garanties;
+    width: 100%;
+}
+
+.garanties {
+    display: grid;
+    padding: 0;
+    grid-gap: 10px;
+    grid-template-areas:
+"tekst1 tekst2 tekst3";
+}
+
+.tekst1 {
+    grid-area: tekst1;
+    background-color: #d69a57;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+}
+
+.tekst2 {
+    grid-area: tekst2;
+    background-color: #d69a57;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+}
+
+.tekst3 {
+    grid-area: tekst3;
+    background-color: #d69a57;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+}
+
+.content3 {
+    grid-area: vragen;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.content4 {
+    grid-area: illustratie1;
+    width: 100%;
+}
+
+.img-groot {
+    width: 100%;
+}
+
+.img-big-shoe {
+    padding: 10px;
+    float: right;
+}
+
+
+/***********************************************/
+/***********************************************/
+/********       Opmaak Footer        ***********/
+/***********************************************/
+/***********************************************/
+
+footer {
+    grid-area: g-footer;
+    background-color: black;
+    text-align: center;
+    height:70px;
+    width: 100%;
+
+}
+
+.footer-tekst {
+    color: white;
+}
+
+
+/***********************************************/
+/***********************************************/
+/*******Algemene opmaak Product pagina *********/
+/***********************************************/
+/***********************************************/
+
+
+.grid-product {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    grid-template-areas:
+"g-header"
+"g-main-producten"
+"g-footer";
+}
+
+.width-producten {
+    width: 100%;
+}
+
+.main-producten {
+    display: grid;
+    grid-area: g-main-producten;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas:
+"g-aside-producten g-producten";
+}
+
+.aside-producten {
+    grid-area: g-aside-producten;
+    border-right: 2px solid white;
+    padding: 10px;
+    width: 100%;
+}
+
+.aside-producten li {
+    display: block;
+
+}
+
+.aside-producten li:hover {
+    color: blue;
+}
+
+.aside-producten ul {
+    padding: 0;
+}
+
+.aside-producten ul li{
+    background-color: #d69a57;
+    padding:5px;
+    border-radius: 3px;
+    border: 2px solid black;
+    margin: 10px;
+
+}
+
+.article-producten h5{
+    font-size: 17px;
+}
+
+.article-producten {
+    grid-area: g-producten;
+    /*display: grid;*/
+    padding: 0;
+    /*grid-template-areas:
+    "g-nike-producten"
+    "g-adidas-producten"
+    "g-puma-producten"
+    "g-vans-producten";*/
+}
+
+.article-producten img {
+    border-radius: 10px;
+}
+
+
+/*****************Flexbox producten*******/
+/*********************************************/
+.merk-naam{
+    display:flex;
+}
+
+.flex-producten{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.item{
+    flex-basis: 23%;
+    max-width: 25%;
+
+}
+
+/*********************************************/
+/*****************opmaak nike producten*******/
+/*********************************************/
+
+.nike-producten {
+    grid-area: g-nike-producten;
+}
+
+.n-nike-naam {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    max-width: fit-content;
+    margin-left: 10px;
+    border-radius: 5px;
+
+}
+
+.nike-producten a {
+    text-decoration: none;
+    color: black;
+}
+
+.nike-producten a:hover {
+    color: blue;
+}
+
+.n-product1 {
+    padding: 10px;
+}
+
+.n-product2 {
+    padding: 10px;
+}
+
+.n-product3 {
+    padding: 10px;
+}
+
+.n-product4 {
+    padding: 10px;
+}
+
+.n-product5 {
+    padding: 10px;
+}
+
+.n-product6 {
+    padding: 10px;
+}
+
+.n-product7 {
+    padding: 10px;
+}
+
+
+/*opmaak adidas producten*/
+.adidas-producten {
+    grid-area: g-adidas-producten;
+}
+
+.a-adidas-naam {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    max-width: fit-content;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.a-product1 {
+    padding: 10px;
+}
+
+.a-product2 {
+    padding: 10px;
+}
+
+.a-product3 {
+    padding: 10px;
+}
+
+.a-product4 {
+    padding: 10px;
+}
+
+.a-product5 {
+    padding: 10px;
+}
+
+.a-product6 {
+    padding: 10px;
+}
+
+
+/*opmaak puma producten*/
+.puma-producten {
+    grid-area: g-puma-producten;
+}
+
+.p-puma-naam {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    max-width: fit-content;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.p-product1 {
+    padding: 10px;
+}
+
+.p-product2 {
+    padding: 10px;
+}
+
+.p-product3 {
+    padding: 10px;
+}
+
+.p-product4 {
+    padding: 10px;
+}
+
+.p-product5 {
+    padding: 10px;
+}
+
+.p-product6 {
+    padding: 10px;
+}
+
+/*opmaak vans producten*/
+.vans-producten {
+    grid-area: g-vans-producten;
+}
+
+
+.v-vans-naam {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    max-width: fit-content;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.v-product1 {
+    padding: 10px;
+}
+
+.v-product2 {
+    padding: 10px;
+}
+
+.v-product3 {
+    padding: 10px;
+}
+
+.v-product4 {
+    padding: 10px;
+}
+
+.v-product5 {
+    padding: 10px;
+}
+
+.v-product6 {
+    padding: 10px;
+}
+
+
+/***********************************************/
+/***********************************************/
+/***Algemene opmaak Product detail pagina*******/
+/***********************************************/
+/***********************************************/
+
+.grid-product-detail {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    grid-template-areas:
+"g-header"
+"g-main-detail"
+"g-footer";
+}
+
+.main-detail {
+    grid-area: g-main-detail;
+}
+
+.article-detail {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+"product-foto product-info";
+}
+
+.product-foto {
+    grid-area: product-foto;
+    width: 100%;
+}
+
+.product-info {
+    grid-area: product-info;
+    text-align: left;
+    padding: 0 10px 10px 10px;
+    width: 100%;
+
+}
+
+.img-product {
+    width: 100%;
+}
+
+.naam-product {
+    font-size: 30px;
+}
+
+/*Opmaak specificaties*/
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+dt:before {
+    padding: 0;
+    white-space: pre;
+    content: "\a ";
+}
+
+
+/***********************************************/
+/***********************************************/
+/***Algemene opmaak Contact pagina       *******/
+/***********************************************/
+/***********************************************/
+
+.grid-contact {
+    display: grid;
+    grid-template-areas:
+"g-header"
+"main-contact"
+"g-footer";
+}
+
+.main-contact {
+    grid-area: main-contact;
+}
+
+
+.grid-article-contact {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+"g-info"
+"g-contact";
+}
+
+.g-info {
+    grid-area: g-info;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+"locatie info-website";
+}
+
+.locatie {
+    grid-area: locatie;
+}
+
+.info-website {
+    grid-area: info-website;
+}
+
+.tekst-info {
+    padding: 100px 70px 200px 80px;
+    text-align: left;
+}
+
+.iframe {
+    width: 100%;
+    padding: 10px;
+}
+
+.g-contact {
+    grid-area: g-contact;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+"contact-gegevens illustratie-contact";
+}
+
+.contact-gegevens {
+    grid-area: contact-gegevens;
+    padding: 100px 10px 10px 10px;
+}
+
+.illustratie-contact {
+    grid-area: illustratie-contact;
+}
+
+.img-contact {
+    width: 80%;
+    padding: 10px;
+    float: right;
+}
+
+/****************Filter instellen*****************/
+.main-producten input[type="radio"] {
+    display: none;
+}
+
+[value="alle"]:checked ~ .aside-producten ul [for="alle"],
+[value="rood"]:checked ~ .aside-producten ul [for="rood"],
+[value="wit"]:checked ~ .aside-producten ul [for="wit"],
+[value="oranje"]:checked ~ .aside-producten ul [for="oranje"] {
+    color: blue;
+}
+
+/*producten visible of unvisible maken*/
+[value="alle"]:checked ~ .article-producten section section section:not(.alle) {
+    display: none;
+}
+
+[value="rood"]:checked ~ .article-producten section section section:not(.rood) {
+    display: none;
+}
+
+
+[value="wit"]:checked ~ .article-producten section section section:not(.wit) {
+    display: none;
+}
+
+[value="oranje"]:checked ~ .article-producten section section section:not(.oranje) {
+    display: none;
+}
+
+/*Merknaam titel bij filtering visible of unvisible maken*/
+[value="oranje"]:checked ~ .article-producten section h3:not(.oranje) {
+    display: none;
+}
+
+[value="rood"]:checked ~ .article-producten section h3:not(.rood) {
+    display: none;
+}
+
+[value="wit"]:checked ~ .article-producten section h3:not(.wit) {
+    display: none;
+}
+
+
+/***********************************************/
+/***********************************************/
+/**********Algemene opmaak FAQ pagina***********/
+/***********************************************/
+/***********************************************/
+
+.grid-faq-body {
+    display: grid;
+    grid-template-areas:
+"g-header"
+"main-faq"
+"g-footer";
+}
+
+.grid-faq-main {
+    grid-area: main-faq;
+}
+
+.grid-faq-article {
+    display: grid;
+    grid-template-areas:
+"faq-lijst faq-aside";
+}
+
+.faq-lijst {
+    grid-area: faq-lijst;
+}
+
+.faq-aside {
+    grid-area: faq-aside;
+}
+
+.faq-img {
+    width: 100%;
+    float:right;
+}
+
+.faq-lijst > h3 {
+    font-size: 40px;
+}
+
+.faq-lijst > dl > dt {
+    font-size: 18px;
+}
+
+
+/***********************************************/
+/***********************************************/
+/***Algemene opmaak Personaliseer pagina********/
+/***********************************************/
+/***********************************************/
+
+.grid-personaliseren-body {
+    display: grid;
+    grid-template-areas:
+    "g-header"
+    "main-personaliseren"
+    "g-footer";
+}
+
+.main-personaliseren {
+    grid-area: main-personaliseren;
+}
+
+.article-personaliseren {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+"g-pers-tekst g-pers-image"
+"g-keuze .";
+}
+
+.pers-tekst {
+    grid-area: g-pers-tekst;
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+}
+
+.pers-tekst > p {
+    padding-right: 100px
+}
+
+.pers-image {
+    grid-area: g-pers-image;
+}
+
+.pers-keuze {
+    grid-area: g-keuze;
+}
+
+.pers-keuze > p {
+    margin: 0 0 0 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #d69a57;
+    padding: 0 10px;
+
+}
+
+.img-kleuren {
+    float: right;
+    width: 30%;
+}
+
+
+/***********************************Opmaak voor input*******************/
+.keuzeknoppen {
+    max-width: 50em;
+    margin:10px;
+}
+
+.keuzeknoppen fieldset{
+    border:1px solid;
+    margin-top:1em;
+    display:block;
+}
+
+
+.keuzeknoppen label{
+    display:inline-block;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.keuzeknoppen label[for="opmerkingen"]{
+    width: 100%;
+}
+
+.keuzeknoppen textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10em;
+}
+
+.keuzeknoppen label>input{
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.keuzeknoppen input[type="submit"]{
+    padding-right: 5px;
+    margin: 1em 0 1em auto;
+    width: 10em;
+}
+
+.keuzeknoppen{
+    margin-bottom: 3em;
+}
+
+.keuzeknoppen fieldset>label,
+.keuzeknoppen fieldset>input {
+    display:block;
+}
+
+.keuzeknoppen input[type="radio"]{
+    float: right;
+}
+
+/*************************************************************************/
+
+/*opmaak select menu schoen model*/
+#schoen-model {
+    padding: 10px;
+    background-color: #d69a57;
+    font-weight: bold;
+    border: 1px solid black;
+    width: 100%;
+}
+
+/*********************************************fieldssets***************/
+
+legend {
+    background-color: #d69a57;
+    color: white;
+}
+
+fieldset fieldset{
+    border: none;
+}
+
+
+/***************************************************/
+/***************************************************/
+/*Algemene opmaak Bevestiging personalisatie pagina*/
+/***************************************************/
+/***************************************************/
+
+.grid-bevestiging-body {
+    display: grid;
+    height:100vh;
+    grid-template-areas:
+    "g-header"
+    "main-bevestiging"
+    "g-footer";
+}
+
+.main-bevestiging {
+    grid-area: main-bevestiging;
+
+}
+
+.article-bevestiging {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:
+"bevestiging-bericht bevestiging-afbeelding";
+}
+
+.bevestiging-bericht {
+    grid-area: bevestiging-bericht;
+}
+
+.bevestiging-afbeelding {
+    grid-area: bevestiging-afbeelding;
+}
+
+.image-bevestiging {
+    width: 100%;
+    float: right;
+}
+
+.bevestiging-bericht p:nth-child(2) {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bevestiging-bericht p {
+    padding-right: 400px;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+/***************************Mediaqueries*******************************/
+/**********************************************************************/
+/**********************************************************************/
+
+@media (max-width: 356px) {
+
+    /***********Opmaak producten pagina*************/
+    .aside-producten{
+        padding:0;
+    }
+
+    .aside-producten ul li{
+        display:inline-block;
+    }
+
+    .item{
+        flex-basis: auto;
+        max-width: 38%;
+    }
+
+    .main-producten {
+        grid-gap: 3px;
+        padding: 3px;
+        grid-template-columns: auto;
+        grid-template-areas:
+"g-aside-producten"
+"g-producten";
+    }
+}
+
+@media (max-width: 600px) {
+
+    /******Opmaak Header******/
+
+    .heading-logo-naam{
+        display:none;
+    }
+
+    .logo-opmaak{
+        float: none;
+    }
+
+    .heading-nav{
+        display:block;
+        padding:0;
+    }
+
+    .heading-nav li,
+    .heading-nav li a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .heading-nav li ul{
+        width: 48%;
+        left:0;
+        padding:0;
+        margin-left: 8px;
+    }
+
+
+    /*******Opmaak Index pagina******/
+    .article-home{
+        display: grid;
+        grid-gap: 3px;
+        grid-template-areas:
+"garanties"
+"vragen";
+    }
+
+    .content3{
+        display:block;
+        padding:3px;
+    }
+
+    .garanties{
+        display:inline-block;
+    }
+
+    .garanties li{
+        display:inline-block;
+        margin: 5px 0;
+    }
+
+    .img-groot{
+        display: none;
+    }
+
+    .img-big-shoe{
+        display:none;
+    }
+
+    /***********Opmaak producten pagina*************/
+
+    .aside-producten{
+        padding:0;
+    }
+
+    .aside-producten ul li{
+        display:inline-block;
+    }
+
+    .item{
+        flex-basis: auto;
+        max-width: 44%;
+    }
+
+    .main-producten {
+        grid-gap: 3px;
+        padding: 3px;
+        grid-template-columns: auto;
+        grid-template-areas:
+"g-aside-producten"
+"g-producten";
+    }
+
+
+    /*************Opmaak Personalisatie pagina********/
+
+    .article-personaliseren {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "g-pers-tekst"
+        "g-keuze";
+    }
+
+    .pers-keuze>p{
+        display: none;
+    }
+
+    .pers-tekst > p {
+        padding-right: 0;
+    }
+
+    .pers-image{
+        display:none;
+    }
+
+/***********************Opmaak FAQ****************/
+
+    .grid-faq-article{
+        grid-template-columns: auto;
+        grid-template-areas:
+    "faq-lijst";
+    }
+
+    .faq-aside{
+        display:none;
+    }
+    /***********************Opmaak Contact****************/
+    .g-info{
+        grid-template-columns: auto;
+        grid-template-areas: "info-website";
+    }
+
+    .locatie{
+        display: none;
+    }
+
+    .g-contact{
+        grid-template-columns: auto;
+        grid-template-areas:
+                "contact-gegevens";
+    }
+
+    .illustratie-contact{
+        display:none;
+    }
+
+    .contact-gegevens{
+        padding: 0;
+    }
+
+    .tekst-info{
+        padding :0;
+    }
+
+    /***********************Opmaak Bevestiging****************/
+    .article-bevestiging {
+        grid-template-columns: auto;
+        grid-template-areas: "bevestiging-bericht";
+    }
+
+    .bevestiging-afbeelding{
+        display:none;
+    }
+
+    .bevestiging-bericht{
+        text-align: center;
+
+    }
+
+    .bevestiging-bericht p {
+        padding-right: 0;
+    }
+
+    /********************Opmaak Product detail************/
+    .article-detail {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "product-foto"
+        "product-info";
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    /********************Opmaak Header************/
+
+    .heading-nav{
+        display:block;
+        padding:0;
+    }
+
+    .heading-nav li,
+    .heading-nav li a{
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .heading-nav li ul{
+        width: 45%;
+        left:0;
+        padding:0;
+        margin-left: 8px;
+    }
+
+
+    /*******Opmaak Index pagina******/
+
+    .img-big-shoe{
+        display:none;
+    }
+
+    .article-home{
+        display: grid;
+        grid-gap: 3px;
+        grid-template-areas:
+"img-groot"
+"garanties"
+"vragen";
+    }
+
+    .content3{
+        display:block;
+        padding:3px;
+    }
+
+    .garanties{
+        display:inline-block;
+    }
+
+    .garanties li{
+        display:inline-block;
+        margin: 5px 0;
+    }
+
+    /***********Opmaak producten pagina*************/
+    .aside-producten{
+        padding:0;
+    }
+
+    .aside-producten ul li{
+        display:inline-block;
+    }
+
+    .item{
+        flex-basis: auto;
+        max-width: 29%;
+    }
+
+    .main-producten {
+        grid-gap: 3px;
+        padding: 3px;
+        grid-template-columns: auto;
+        grid-template-areas:
+"g-aside-producten"
+"g-producten";
+    }
+
+
+    /***********************Opmaak FAQ****************/
+
+    .grid-faq-article{
+        grid-template-columns: auto;
+        grid-template-areas:
+    "faq-lijst";
+    }
+
+    .faq-aside{
+        display:none;
+    }
+
+
+    /***********************Opmaak Contact****************/
+    .g-contact{
+        grid-template-columns: auto auto;
+    }
+
+    .img-contact{
+        width: 60%;
+    }
+
+    .contact-gegevens{
+        padding: 0;
+    }
+
+    .locatie{
+        margin-right: 5px;
+    }
+
+    .iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .tekst-info{
+        padding:10px;
+    }
+
+    .g-info{
+        grid-template-columns: auto auto;
+    }
+
+    .info-website{
+        margin-left: 5px;
+    }
+
+
+    /***********************Opmaak Bevestiging****************/
+    .article-bevestiging {
+        grid-template-columns: auto;
+        grid-template-areas: "bevestiging-bericht";
+    }
+
+    .bevestiging-afbeelding{
+        display:none;
+    }
+
+    .bevestiging-bericht{
+        text-align: center;
+
+    }
+
+    .bevestiging-bericht p {
+        padding-right: 0;
+    }
+
+    /********************Opmaak Product detail************/
+    .article-detail {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "product-foto"
+        "product-info";
+    }
+
+    .product-foto{
+        width: 85%;
+        padding-left: 50px;
+    }
+
+    .product-info{
+        padding-left: 50px;
+        width: 85%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+
+
+    /*******************Opmaak Index pagina***********/
+    .article-home{
+        display: grid;
+        grid-gap: 7px;
+        grid-template-areas:
+"img-groot img-groot"
+"garanties garanties"
+"vragen illustratie1";
+    }
+
+    .img-big-shoe{
+        width: 85%;
+    }
+
+    /***********Opmaak producten pagina*************/
+    .item{
+        flex-basis: auto;
+        max-width: 22%;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+    /***********Opmaak producten pagina*************/
+    .item{
+        flex-basis: auto;
+        max-width: 18%;
+    }
+
+    /***********************Opmaak Bevestiging****************/
+    .image-bevestiging{
+        width: 85%;
+    }
+
+    .bevestiging-bericht{
+        padding-right: 200px;
+    }
+
+}
+
+@media (min-width: 1800px) {
+    /***********Opmaak producten pagina*************/
+    .item{
+        flex-basis: auto;
+        max-width: 15%;
+    }
+
+
+    /*************Opmaak Personalisatie pagina********/
+    .pers-tekst > p {
+        padding-right: 200px;
+    }
+
+    /***********************Opmaak FAQ****************/
+    .faq-img{
+        width: 80%;
+    }
+
+
+    /***********************Opmaak Contact****************/
+    .img-contact{
+        width: 60%;
+    }
+
+    .iframe{
+        width: 80%;
+    }
+
+    .tekst-info{
+        padding-left:0;
+    }
+
+
+    /***********************Opmaak Bevestiging****************/
+    .image-bevestiging{
+        width: 75%;
+    }
+
+    .bevestiging-bericht{
+        padding-right: 500px;
+    }
+
+    /***********************Opmaak Product detail****************/
+    .product-foto{
+        width: 85%;
+    }
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+/***************************Javascript*********************************/
+/**********************************************************************/
+/**********************************************************************/
+
+#error_fnaam{
+    color: red;
+}
+
+
+#error_email{
+    color: red;
+}
+
+#error_submit{
+    color: red;
+    text-align: right;
+    padding:5px;
+    display: block;
+}
+
+.bevestiging-bericht>ul>li {
+    display: block;
+}
+
+.bevestiging-bericht>ul{
+    padding: 5px 5px 5px 0;
+}
+
+
